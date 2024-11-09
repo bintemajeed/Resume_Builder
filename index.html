@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+    <header>
+        <h1>Dynamic Resume Builder</h1>
+        <p>Take control of your career - design a resume that works for you!</p>
+      </header>
+      <main>
+<div class="main-container">
+        <div class="form-container">
+
+         <form id="resume-form">
+              <section class="personal-info-f sect">
+                <div class="personal-info-header sect-header">
+                    <h2>What's the best way for your employers to contact you?</h2>
+                    <p>we suggest adding an email and a phone number</p>
+                  </div>
+                  <div class="personal-info-grid">
+                <div class="name">
+                  <label> FIRST NAME</label>
+                  <input type="text" name="first-name" placeholder="e.g. John" required />
+                </div>
+                <div class="surname">
+                  <label>SURNAME</label>
+                  <input type="text" name="surname" placeholder="e.g. Doe" />
+                </div>
+                <div class="prof">
+                  <label>PROFESSION</label>
+                  <input type="text" name="prof" placeholder="e.g. Sr.Accountant" required />
+                </div>
+                <div class="city">
+                  <label>CITY/STATE</label>
+                  <input type="text" name="city" placeholder="e.g. Karachi" required />
+                </div>
+                <div class="country">
+                  <label>COUNTRY</label>
+                  <input type="text" name="country" placeholder="e.g. Pakistan" required />
+                </div>
+                <div class="phone">
+                  <label>PHONE</label>
+                  <input type="tel" name="phone" placeholder="e.g. 123-456-7890" />
+                </div>
+                <div class="email">
+                  <label>EMAIL</label>
+                  <input type="email"name='email' placeholder="e.g. abc@example.com" required />
+                </div>
+                <div class="profile-pic">
+                    <label for="">Your Profile Picture</label>
+                    <input type="file" name="pfp1" id="pfp1" placeholder="select">
+                </div>
+            </div>
+              </section>
+              <section class="education-f sect">
+                <div class="education-header sect-header">
+                    <h2>Tell us about your education</h2>
+                    <p>
+                      Enter your education so far, even if you are a current student and
+                      did not graduate
+                    </p>
+                  </div>
+                <div class="education-grid">
+                <div class="school-name">
+                  <label for="">SCHOOL NAME</label>
+                  <input type="text" name="school-name" placeholder="e.g. ABC university" required />
+                </div>
+                <div class="s-location">
+                  <label for="">SCHOOL LOCATION</label>
+                  <input type="text" name="s-location" placeholder="e.g. Karachi, Sindh" required />
+                </div>
+                <div class="degree">
+                  <label for="">DEGREE</label>
+                  <input
+                    type="text" name="degree" placeholder="e.g. Data Scientist" required />
+                </div>
+                <div class="field">
+                  <label for="">FIELD OF STUDY</label>
+                  <input
+                    type="text" name="field" placeholder="e.g. Information Technology" required/>
+                </div>
+                <div class="grad-date">
+                  <label for="">GRADUATION DATE (OR EXPECTED GRADUATION DATE)</label>
+                  <input type="date" name="grad-date" id="" placeholder="" required />
+                </div>
+            </div>
+                <div class="education-grid2">
+                  <div class="school-name2">
+                    <label for="">SCHOOL NAME</label>
+                    <input type="text" name="school-name2" placeholder="e.g. ABC university"  />
+                  </div>
+                  <div class="s-location2">
+                    <label for="">SCHOOL LOCATION</label>
+                    <input type="text" name="s-location2" placeholder="e.g. Karachi, Sindh"  />
+                  </div>
+                  <div class="degree2">
+                    <label for="">DEGREE</label>
+                    <input
+                      type="text" name="degree2" placeholder="e.g. Data scientist"  />
+                  </div>
+                  <div class="field2">
+                    <label for="">FIELD OF STUDY</label>
+                    <input
+                      type="text" name="field2" placeholder="e.g. Information Technology" />
+                  </div>
+                  <div class="grad-date2">
+                    <label for="">GRADUATION DATE (OR EXPECTED GRADUATION DATE)</label>
+                    <input type="date" name="grad-date2" id="" placeholder=""   />
+                  </div>
+                </div>
+                <div class="button">
+                    <button id="addEduButton">Add More Education</button>
+                </div>
+              </section>
+            
+              <section class="experience sect">
+                <div class="experience-header sect-header">
+                    <h2>Highlight your professional journey</h2>
+                    <p>
+                        Describe your roles and achievements to showcase your contributions.
+                    </p>
+                  </div>
+                <div class="experience-grid">
+                <div class="job-title">
+                  <label for="">JOB TITLE</label>
+                  <input type="text" name="job-title" placeholder="e.g. Web Developer" required />
+                </div>
+                <div class="employer">
+                  <label for="">EMPLOYER</label>
+                  <input type="text" name="employer" placeholder="Company Name "  required/>
+                </div>
+                <div class="e-location">
+                  <label for="">LOCATION</label>
+                  <input
+                    type="text" name="e-location" placeholder="e.g. Karachi, Pakistan"  required/>
+                </div>
+                <div class="job-start-date">
+                  <label for="">START DATE</label>
+                  <input
+                    type="date" name="job-start-date" placeholder="" required/>
+                </div>
+                <div class="job-end-date">
+                  <label for="">GRADUATION DATE (OR EXPECTED GRADUATION DATE)</label>
+                  <input type="date" name="job-end-date" id="" placeholder="" required/>
+                </div>
+            </div>
+            <div class="experience-grid2 sect">
+              <div class="job-title2">
+                <label for="">JOB TITLE</label>
+                <input type="text" name="job-title" placeholder="e.g. Web Developer"  />
+              </div>
+              <div class="employer2">
+                <label for="">EMPLOYER</label>
+                <input type="text" name="employer" placeholder="Company Name "  />
+              </div>
+              <div class="e-location2">
+                <label for="">LOCATION</label>
+                <input
+                  type="text" name="e-location" placeholder="e.g. Karachi, Pakistan"  />
+              </div>
+              <div class="job-start-date2">
+                <label for="">START DATE
+                <input
+                  type="date" name="job-start-date" placeholder="" />
+              </div>
+              <div class="job-end-date2">
+                <label for="">GRADUATION DATE (OR EXPECTED GRADUATION DATE)</label>
+                <input type="date" name="job-end-date" id="" placeholder="" />
+              </div>
+          </div>
+            <div class="button">
+                <button id="addExpButton">Add some Experience</button>
+            </div>
+              </section>
+            
+
+              <section class="skills-f sect">
+                <div class="skills-header sect-header">
+                    <h2>What Skills Make You Shine?</h2>
+                    <p>Detail your skills with examples and measurable achievements to highlight your impact</p>
+                </div>
+                <textarea name="skills-textarea" id="skillstextarea" placeholder="Pressing enter would add another skill" required></textarea>
+              </section>
+              
+
+              <section class="summary sect">
+                <div class="summary-header sect-header">
+                    <h2>Breifly tell about your background</h2>
+                    <p>Summarize your key achievements and aspirations in a few impactful sentences</p>
+                </div>
+                <textarea name="summary-textarea" id="sum-textarea" placeholder="Craft a concise summary that highlights your strengths, experiences, and career goals" required></textarea>
+              </section>
+              
+
+              <section class="certifications-f sect">
+                <div class="certifications sect-header">
+                    <h2>Your Certifications    (Optional)</h2>
+                    <p>Add any coursework you're proud to showcase </p>
+                </div>
+                <textarea name="certification-textarea" id="certification-textarea" placeholder="Pressing enter would add another certification"></textarea>
+              </section>
+
+
+              <section class="language-f">
+                <div class="lang-header sect-header">
+                    <h2>Languages    (Optional)</h2>
+                    <p>We recommend including this section if you speak multiple languages</p>
+                </div>
+                <textarea name="lang-textarea" id="lang-textarea" placeholder="Pressing enter would add a new language"></textarea>
+              </section>
+            </form>
+              <div class="genButton">
+                <button id="gen-resume-button">Generate Resume</button>
+              </div>
+        </div>
+       <div class="output">
+        <div class="container">
+            <div class="resume-container">
+            <div class="left">
+                <div class="pfp-div">
+                    <img src="man.png" alt="profile picture" id="pfp2" />
+                  </div>
+                  <div class="left-sections">
+                  <section class="contact">
+                  <h3>CONTACT</h3>
+                  <div class="m-top-bottom">
+                  <div class="contact-item">
+                    <ion-icon size="large" name="call-outline"></ion-icon>
+                    <h4>Phone:</h4>
+                  </div>
+                  <p class="c-para " id="phone-r">03000000000</p>
+                </div>
+                <div class="m-top-bottom">
+                  <div class="contact-item">
+                    <ion-icon size="large" name="mail-outline"></ion-icon>
+                    <h4>Email:</h4>
+                  </div>
+                  <p class="c-para" id="email-r">abc@examle.com</p>
+                </div>
+                <div class="m-top-bottom">
+                  <div class="contact-item">
+                    <ion-icon size="large" name="location-outline"></ion-icon>
+                    <h4>Address:</h4>
+                  </div>
+                  <p class="c-para" style="display: flex;"><p id="city-r">city</p><p id="country-r">country</p></p>
+                </div>
+                </section>
+                <section class="skills-r">
+                    <h3>SKILLS</h3>
+                    <ul class="skills-ul">
+                    </ul>
+                  </section>
+                  <section class="language-r">
+                    <h3>Languages</h3>
+                    <ul class="lang-ul">
+                    </ul>
+                  </section>
+                </div>
+            </div>
+            <div class="right">
+                <div class="personal-info-r">
+                    <h1 id="name" style="display: inline;">NAME</h1><h1 id="surname" style="display: inline;"> SURNAME</h1>
+                    <h4 id="prof-r">Your Profession Here</h4>
+                </div>
+                <div class="right-sections">
+                  <section class=" about-me">
+                    <h3>ABOUT ME</h3>
+                    <div class="right-sec-content"></div>
+                    <p id="summary-r">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Inventore quia eligendi quae sed, nihil ipsa eos asperiores
+                      recusandae pariatur illum quidem possimus aliquam dignissimos
+                      ipsam in sit! Explicabo, cupiditate enim?
+                    </p>
+                  </section>
+                  <section class="exp">
+                    <h3>EXPERIENCE </h3>
+                    <ul>
+                    <li>
+                    <p class="font" id="exp-details">
+                      dd/mm/yy-dd/mm/yy <br />
+                      JOB TITLE
+                    </p>
+                  </li>
+                  <li>
+                    <p id="exp-details2">
+                      dd/mm/yy-dd/mm/yy <br />
+                      JOB TITLE
+                    </p>
+                  </li>
+                  </ul>
+                  </section>
+                  <section class="education-r">
+                    <h3>EDUCATION</h3>
+                   <ul>
+                  <li> 
+                    <p id="edu-details">Graduated on dd/mm/yy from school-name <br />Field</p>
+                </li>
+                <li>
+                    
+                    <p id="edu-details2">Graduated on dd/mm/yy from school-name <br />Field</p>
+                </li>
+                </ul>
+                  </section>
+                  <section class="certifications-r">
+                    <h3>CERTIFICATIONS</h3>
+                    <ul class="certification-ul">
+                    </ul>
+                  </section>
+                </div>
+            </div>
+            </div>
+            <div class="editButton">
+              <button id="editButton">Edit Resume</button>
+            </div>
+        </div>    
+       </div>
+    </div>
+      </main>
+      <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+</body>
+</html>
