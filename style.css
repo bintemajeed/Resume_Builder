@@ -1,0 +1,361 @@
+*{
+    margin: 0;
+    padding :0;
+    box-sizing: border-box;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+body{
+    color: rgb(35, 49, 67);
+    }
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+header{
+    text-align: center;
+}
+header h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color:  #00494d;
+}
+header p {
+    font-size:2rem;
+}
+.sect-header h2{
+    font-weight: 600;
+    color:  #00494d;
+    font-size: 35px;
+}
+.sect-header p{
+    font-size: 25px;
+}
+.sect-header{
+    margin-bottom: 20px;
+}
+.main-container{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.form-container{
+    box-shadow: 10px 10px 15px rgb(212, 209, 209),
+    -10px 0px 15px rgb(207, 201, 201);
+    padding:25px 40px;
+}
+.sect{
+    margin-bottom:4rem;
+}
+input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1.3px solid rgb(151, 140, 140);
+    font-size: 20px;
+  }
+  label {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 2px;
+    display: block;
+    color: #00494d;
+  }
+  .personal-info-grid {
+    display: grid;
+    grid-template-rows: 50px 50px 50px 50px 50px;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 40px;
+    column-gap: 20px;
+    margin-bottom: 30px;
+  }
+  .name {
+    grid-row: 1;
+    grid-column: 1 / 3;
+  }
+  .surname {
+    grid-row: 1;
+    grid-column: 3 / 5;
+  }
+  .prof {
+    grid-row: 2;
+    grid-column: 1 / 5;
+  }
+  .city {
+    grid-row: 3;
+    grid-column: 1 / 3;
+  }
+  .country {
+    grid-row: 3;
+    grid-column: 3 / 5;
+  }
+  .phone {
+    grid-row: 4;
+    grid-column: 3 / 5;
+  }
+  .email {
+    grid-row: 4;
+    grid-column: 1 / 3;
+  }
+  .profile-pic{
+    grid-row: 5;
+    grid-column: 1 / 5;
+    
+  }
+  #pfp1{
+    width: auto;
+    height: auto;
+    border: none;
+  }
+  .education-grid,.education-grid2, .experience-grid,.education-grid2{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 25px;
+    column-gap: 20px;
+
+}
+.education-grid2,.experience-grid2{
+    display: none;
+  }
+  .school-name,.school-name2,.job-title,.job-title2{
+      grid-row: 1;
+      grid-column: 1 / 2;
+  }
+  .s-location,.s-location2, .employer,.employer2{
+      grid-row: 1;
+      grid-column: 2 / 3;
+  }
+  .degree,.degree2, .e-location, .e-location2{
+      grid-row: 2;
+      grid-column: 1/3;
+  }
+  .field,.field2, .job-start,.job-start2{
+      grid-row: 3;
+      grid-column:1 / 2;
+  }
+  .grad-date,.grad-date2, .job-end,.job-end2{
+      grid-row:3;
+      grid-column:2 / 3 ;
+  }
+  .sect-header{
+      margin:20px 0px;
+      margin-bottom: 20px;
+  }
+  .sect-header h3{
+      color: #00494d;
+      font-size: 1.5em; 
+      font-weight: 600;
+  }
+  textarea{
+    width: 100%;
+    padding: 20px;
+    height: 150px;
+    font-size: 20px;
+    border-radius: 10px;
+   
+}
+.button{
+    display: flex;
+    justify-content: end;
+    margin: 15px 0px 0px 0px;
+}
+.language-f{
+    margin-bottom: 20px;
+}
+button{
+    padding: 17px; 
+    color: #00494d;
+    background-color:white;
+    border: 1px solid #00494d;
+    font-size: 20px; 
+    transition: background-color 0.3s ease; 
+    font-weight: 600;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #00494d;
+    color: white;
+}
+button:active{
+background-color: #011516;
+}
+input,textarea{
+    transition: border 0.3s ease;
+}
+input:focus, textarea:focus{
+    border-color: #117da8;
+    outline:none;    
+}
+::placeholder{
+    color: rgb(35, 49, 67) ;
+}
+.genButton{
+    display: flex;
+    justify-content: center;
+    background-color: #00494d;
+    color: white;
+}
+#gen-resume-button{
+    width: 100%;
+    background-color: #00494d;
+    color: white;
+}
+.output p{
+    font-size: 13px;
+    font-weight: 100;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin:20px 20px;
+}
+.resume-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    min-height: 130vh;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.left{
+    background-color: #002425;
+    width:30%;
+    color:beige;
+    font-weight: 100;
+
+}
+.right{
+    background-color:beige;
+    width: 75%;
+    font-weight: 300;
+    color:  rgb(24, 33, 46);
+}
+#pfp2{
+    width:90%;
+    height: 250px;
+    border-radius: 50%;
+    border: 1.5px solid white;
+    object-position: top;
+    object-fit: cover;
+    box-shadow: 5px 5px 15px rgb(10, 5, 5),
+    -5px 5px 15px rgb(12, 7, 7);;
+
+}
+.pfp-div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+h3{
+    font-size:30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.contact-item{
+    display: flex;
+    flex-direction: row;
+}
+.contact-item h4{
+    font-size: 25px;
+    font-weight: 300;
+}
+.m-top-bottom{
+margin: 15px 0px;
+}
+.skills-r{
+    margin: 20px 0px;
+}
+.left-sections, .right-sections{
+    padding: 30px;
+}
+.left ul li{
+    margin: 20px 30px;
+    font-size:20px ;
+}
+.exp ul li p,.right .education-r ul li p,.certifications-r ul li{
+    font-size: 20px;
+}
+.right .personal-info-r{
+    margin: 40px 100px 50px 0px;
+    border: 1.5px solid #002425;
+    padding: 30px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+   
+}
+.personal-info h1{
+    font-size: 35px;
+    font-weight: 800;
+}
+.right-sec{
+    margin: 35px 0px;
+}
+.right h4{
+color: #002425;
+}
+.right h3{
+    background-color: #002425;
+    color: beige;
+    border-radius: 20px;
+    padding: 5px;
+    width: 50%;
+    text-align: center;
+}
+.about-me p{
+    margin: 25px;
+    font-size: 20px;
+}
+.about-me{
+    margin-top: -5px;
+}
+.about-grid{
+    display: grid;
+    grid-template-columns: 85% 15%;
+    grid-template-rows: auto;
+}
+.about-grid h3{
+    grid-column: 1 / 2;
+}
+.person-icon{
+    grid-column: 2/3;
+    font-size: 20px;
+}
+.education-r,.exp,.certifications-r{
+    margin: 20px 10px;
+}
+.left-sections .contact .m-top-bottom p{
+    font-size: 18px;
+}
+.editButton{
+    position: absolute;
+    right: 15px;
+}
+.skills-input, .certifications-input, .lang-input{
+    margin: 15px 0px 0px 0px;
+}
+.output{
+    display:none
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
