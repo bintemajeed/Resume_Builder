@@ -13,6 +13,9 @@ main{
     align-items: center;
     width: 100%;
     height: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word; 
+    white-space: normal; 
 }
 header{
     text-align: center;
@@ -30,6 +33,9 @@ header p {
     color:  #00494d;
     font-size: 35px;
 }
+.exp li,.education-r li{
+    list-style-type: none;
+}
 .sect-header p{
     font-size: 25px;
 }
@@ -44,6 +50,7 @@ header p {
     flex-direction: column;  
     margin-top: 20px;
     border-radius: 20px;
+    max-width: 70%;
 }
 .form-container{
     box-shadow: 10px 10px 15px rgb(212, 209, 209),
@@ -160,6 +167,7 @@ input {
     height: 150px;
     font-size: 20px;
     border-radius: 10px;
+    overflow-y: auto;
    
 }
 .button{
@@ -225,23 +233,25 @@ input:focus, textarea:focus{
     min-height: 130vh;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
 }
 .left{
     background-color: #002425;
     width:30%;
     color:beige;
     font-weight: 100;
+    max-width: 28vw;
 
 }
 .right{
     background-color:beige;
-    width: 75%;
+    max-width: 48vw; width: 75%;
     font-weight: 300;
     color:  rgb(24, 33, 46);
+
 }
 #pfp2{
     width:90%;
-    height: 250px;
     border-radius: 50%;
     border: 1.5px solid white;
     object-position: top;
@@ -317,6 +327,7 @@ color: #002425;
 }
 .about-me{
     margin-top: -5px;
+    max-width: 100%;
 }
 .about-grid{
     display: grid;
@@ -346,7 +357,6 @@ color: #002425;
 .output{
     display:none
 }
-
 
 
 
