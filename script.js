@@ -57,6 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var pfp = document.querySelector('#pfp1');
     var pfp2 = document.querySelector('#pfp2');
     var editButton = document.querySelector('#editButton');
+    var downloadButton = document.querySelector('#downloadButton');
+    var resumeOutput = document.querySelector('.resume-container');
     // add functionalities  for buttons
     addEduButton.addEventListener('click', function () {
         eduSection.style.display = 'grid';
@@ -130,26 +132,25 @@ document.addEventListener('DOMContentLoaded', function () {
         city_r.textContent = city.value;
         email_r.textContent = email.value;
         country_r.textContent = country.value;
-        eduDetails.innerHTML = "<h4>".concat(degree.value, "</h4>\n        <p>Graduated from ").concat(schoolName.value, " on ").concat(gradDate.value, ",").concat(schoolLocation.value, " <br/> ").concat(field.value);
+        eduDetails.innerHTML = "<h4>".concat(degree.value, "</h4>\n        <p>Graduated on ").concat(gradDate.value, " from ").concat(schoolName.value, ",").concat(schoolLocation.value, " <br/> ").concat(field.value);
         if (degree2.value === "") {
             document.querySelector('.edu-disp-none').style.display = 'none';
         }
         else {
-            eduDetails2.innerHTML = "<h4>".concat(degree2.value, "</h4>\n    <p>Graduated from ").concat(schoolName2.value, " on ").concat(gradDate2.value, ",").concat(schoolLocation2.value, " <br/> ").concat(field2.value);
+            eduDetails2.innerHTML = "<h4>".concat(degree2.value, "</h4>\n    <p>Graduated on ").concat(gradDate2, " from ").concat(schoolName2.value, ",").concat(schoolLocation2.value, " <br/> ").concat(field2.value);
         }
-        expDetails.innerHTML = "<h4>".concat(jobTitle.value, "</h4>\n         <p>").concat(jobStartDate.value, " - ").concat(jobEndDate.value, " at ").concat(employer.value, ",").concat(eLocation.value);
+        expDetails.innerHTML = "<h4>".concat(jobTitle.value, "</h4>\n         <p>").concat(jobStartDate.value, " to ").concat(jobEndDate.value, " at ").concat(employer.value, ",").concat(eLocation.value);
         if (jobTitle2.value == "") {
             document.querySelector('.exp-disp-none').style.display = 'none';
         }
         else {
-            expDetails2.innerHTML = "<h4>".concat(jobTitle2.value, "</h4>\n         <p>").concat(jobStartDate2.value, " - ").concat(jobEndDate2.value, " at ").concat(employer2.value, ",").concat(eLocation2.value);
+            expDetails2.innerHTML = "<h4>".concat(jobTitle2.value, "</h4>\n         <p>").concat(jobStartDate2.value, " to ").concat(jobEndDate2.value, " at ").concat(employer2.value, ",").concat(eLocation2.value);
         }
     });
     if (pfp) {
         pfp.addEventListener('change', function (event) {
             var _a;
             var file = (_a = pfp.files) === null || _a === void 0 ? void 0 : _a[0];
-            // Change image if a file is uploaded, else set to default
             pfp2.src = file ? URL.createObjectURL(file) : 'default.png';
         });
     }
@@ -157,6 +158,25 @@ document.addEventListener('DOMContentLoaded', function () {
         formContainer.style.display = 'block';
         output.style.display = 'none';
     });
-    // If sir Ameen Alam is reading this, here is a note for you:
-    // I wrote the code by my self but improved  it by AI :)
+    downloadButton.addEventListener('click', function () {
+        if (resumeOutput) {
+            var options = {
+                margin: 0,
+                filename: 'resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'A4', orientation: 'portrait' }
+            };
+            try {
+                // Ensure `html2pdf` exists in the global scope
+                window.html2pdf(resumeOutput, options);
+            }
+            catch (error) {
+                console.error('An error occurred while generating PDF:', error);
+            }
+        }
+        else {
+            console.error('Output element not found.');
+        }
+    });
 });
