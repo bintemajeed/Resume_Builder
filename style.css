@@ -230,7 +230,7 @@ input:focus, textarea:focus{
     flex-direction: row;
     width: 100%;
     height: auto;
-    min-height: 130vh;
+    min-height: auto;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 
@@ -252,6 +252,7 @@ input:focus, textarea:focus{
 }
 #pfp2{
     width:90%;
+    max-height: 240px;
     border-radius: 50%;
     border: 1.5px solid white;
     object-position: top;
@@ -265,6 +266,7 @@ input:focus, textarea:focus{
     justify-content: center;
     margin-bottom: 50px;
     margin-top: 10px;
+
 }
 h3{
     font-size:30px;
@@ -351,9 +353,15 @@ color: #002425;
     position: absolute;
     right: 15px;
 }
-.skills-input, .certifications-input, .lang-input{
-    margin: 15px 0px 0px 0px;
+.downloadButton{
+    position: absolute;
+    right:80px;
 }
+#editButton,#downloadButton {
+    padding: 8px;
+    font-size: 16px;
+}
+
 .output{
     display:none
 }
