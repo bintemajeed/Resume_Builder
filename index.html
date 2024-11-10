@@ -177,7 +177,7 @@
               </div>
           </div>
             <div class="button">
-                <button id="addExpButton">Add some Experience</button>
+                <button id="addExpButton">Add More Experience</button>
             </div>
               </section>
             
@@ -202,19 +202,19 @@
 
               <section class="certifications-f sect">
                 <div class="certifications sect-header">
-                    <h2>Your Certifications    (Optional)</h2>
+                    <h2>Your Certifications</h2>
                     <p>Add any coursework you're proud to showcase </p>
                 </div>
-                <textarea name="certification-textarea" id="certification-textarea" placeholder="Pressing enter would add another certification"></textarea>
+                <textarea name="certification-textarea" id="certification-textarea" placeholder="Pressing enter would add another certification" required></textarea>
               </section>
 
 
               <section class="language-f">
                 <div class="lang-header sect-header">
-                    <h2>Languages    (Optional)</h2>
-                    <p>We recommend including this section if you speak multiple languages</p>
+                    <h2>Languages</h2>
+                    <p>We recommend including languages spoken internationally</p>
                 </div>
-                <textarea name="lang-textarea" id="lang-textarea" placeholder="Pressing enter would add a new language"></textarea>
+                <textarea name="lang-textarea" id="lang-textarea" placeholder="Pressing enter would add a new language" required></textarea>
               </section>
             </form>
               <div class="genButton">
@@ -226,7 +226,7 @@
             <div class="resume-container">
             <div class="left">
                 <div class="pfp-div">
-                    <img src="man.png" alt="profile picture" id="pfp2" />
+                    <img src="default.png" alt="profile picture" id="pfp2" />
                   </div>
                   <div class="left-sections">
                   <section class="contact">
@@ -290,10 +290,9 @@
                       JOB TITLE
                     </p>
                   </li>
-                  <li>
+                  <li class="exp-disp-none">
                     <p id="exp-details2">
-                      dd/mm/yy-dd/mm/yy <br />
-                      JOB TITLE
+                    
                     </p>
                   </li>
                   </ul>
@@ -304,7 +303,7 @@
                   <li> 
                     <p id="edu-details">Graduated on dd/mm/yy from school-name <br />Field</p>
                 </li>
-                <li>
+                <li class="edu-disp-none">
                     
                     <p id="edu-details2">Graduated on dd/mm/yy from school-name <br />Field</p>
                 </li>
