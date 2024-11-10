@@ -121,7 +121,7 @@ input {
     height: auto;
     border: none;
   }
-  .education-grid,.education-grid2, .experience-grid,.education-grid2{
+  .education-grid,.education-grid2, .experience-grid,.experience-grid2{
     display: grid;
     grid-template-columns: 1fr, 1fr;
     grid-template-rows: auto auto auto auto;
