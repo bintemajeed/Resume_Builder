@@ -1,7 +1,7 @@
 
-document.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded',() => {
     const genButton = document.querySelector('#gen-resume-button') as HTMLButtonElement;
-    const formContainer = document.querySelector('.form-container') as HTMLDivElement;
+    const formContainer = document.querySelector('.form-container') as HTMLFormElement;
     const output = document.querySelector('.output') as HTMLDivElement;
     const firstName = document.querySelector('input[name="first-name"]') as HTMLInputElement;
     const firstName_R = document.querySelector('#name') as HTMLElement;
@@ -58,6 +58,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     const pfp = document.querySelector('#pfp1') as HTMLInputElement;
     const pfp2 = document.querySelector('#pfp2') as HTMLImageElement;
     const editButton = document.querySelector('#editButton') as HTMLButtonElement;
+    const downloadButton = document.querySelector('#downloadButton') as HTMLButtonElement;
+    const resumeOutput = document.querySelector('.resume-container')
   
     // add functionalities  for buttons
     
@@ -126,7 +128,9 @@ document.addEventListener('DOMContentLoaded',()=>{
            
         });
      } 
-    genButton.addEventListener('click',() => {
+     
+    
+genButton.addEventListener('click',()=> {
             formContainer.style.display = 'none';
             output.style.display = 'block';
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -140,23 +144,23 @@ document.addEventListener('DOMContentLoaded',()=>{
         country_r.textContent = country.value
     
         eduDetails.innerHTML = `<h4>${degree.value}</h4>
-        <p>Graduated from ${schoolName.value} on ${gradDate.value},${schoolLocation.value} <br/> ${field.value}`
+        <p>Graduated on ${gradDate.value} from ${schoolName.value},${schoolLocation.value} <br/> ${field.value}`
    if(degree2.value === ""){
     (document.querySelector('.edu-disp-none') as HTMLElement).style.display = 'none'}
     else{
          eduDetails2.innerHTML = `<h4>${degree2.value}</h4>
-    <p>Graduated from ${schoolName2.value} on ${gradDate2.value},${schoolLocation2.value} <br/> ${field2.value}`
+    <p>Graduated on ${gradDate2} from ${schoolName2.value},${schoolLocation2.value} <br/> ${field2.value}`
     }
          expDetails.innerHTML = `<h4>${jobTitle.value}</h4>
-         <p>${jobStartDate.value} - ${jobEndDate.value} at ${employer.value},${eLocation.value}`
+         <p>${jobStartDate.value} to ${jobEndDate.value} at ${employer.value},${eLocation.value}`
     if(jobTitle2.value == "" ){
       (document.querySelector('.exp-disp-none') as HTMLElement).style.display = 'none';
     }
     else{
          expDetails2.innerHTML = `<h4>${jobTitle2.value}</h4>
-         <p>${jobStartDate2.value} - ${jobEndDate2.value} at ${employer2.value},${eLocation2.value}`
+         <p>${jobStartDate2.value} to ${jobEndDate2.value} at ${employer2.value},${eLocation2.value}`
     } 
-    })
+});
     if(pfp){
         pfp.addEventListener('change', (event) => {
           const file = pfp.files?.[0];
@@ -166,10 +170,28 @@ document.addEventListener('DOMContentLoaded',()=>{
         editButton.addEventListener('click',() => {
             formContainer.style.display = 'block';
             output.style.display = 'none'
-        })
-         // If sir Ameen Alam is reading this, here is a note for you:
-        // I wrote the code by my self but improved  it by AI :)
-    });
+        });
+        downloadButton.addEventListener('click', () => {
+            if (resumeOutput) {
+                const options = {
+                    margin:       0,
+                    filename:     'resume.pdf',
+                    image:        { type: 'jpeg', quality: 0.98 },
+                    html2canvas:  { scale: 2 },
+                    jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
+                };
+    
+                try {
+                    // Ensure `html2pdf` exists in the global scope
+                    (window as any).html2pdf(resumeOutput, options);
+                } catch (error) {
+                    console.error('An error occurred while generating PDF:', error);
+                }
+            } else {
+                console.error('Output element not found.');
+            }
+});
+});
     
     
     
@@ -189,5 +211,5 @@ document.addEventListener('DOMContentLoaded',()=>{
     
     
     
-    
+
         
